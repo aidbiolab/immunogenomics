@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CX-5461 Immunogenomics Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>CX-5461 Immunogenomics Workflow</h1>
+            <p class="subtitle">A framework for systematic neoantigen prediction and biomarker discovery in HRD-high breast cancer, scalable to colorectal cancer (CRC) applications.</p>
+            <div class="badges">
+                <span class="step-badge" style="background: #10b981;">Breast Cancer Optimized</span>
+                <span class="step-badge" style="background: #4f46e5;">Scalable to CRC</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro card">
+            <h3>Overview</h3>
+            <p>This project demonstrates a 4-step computational pipeline that models neoantigen generation following <strong>CX-5461</strong> induced stress. By integrating public data (TCGA, COSMIC) with experimental signatures (GSE), the framework identifies conserved biomarkers and high-affinity epitopes for chemo-immunotherapy combination strategies.</p>
+        </section>
+
+        <div class="card-grid">
+            <!-- Step 1 -->
+            <div class="card">
+                <span class="step-badge">Phase 01</span>
+                <h3>Data Acquisition</h3>
+                <p>Retrieval of TCGA-BRCA cohorts (N~1,100) using GDC API, focused on HRD-high populations sensitive to G-quadruplex stabilizers.</p>
+                <pre><code>GDCquery(
+  project = "TCGA-BRCA",
+  data.category = "Transcriptome"
+)</code></pre>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="card">
+                <span class="step-badge">Phase 02</span>
+                <h3>Predictive Modeling</h3>
+                <p>Simulation of collateral mutagenesis using the <strong>SBS-CX-5461</strong> signature. Prediction of MHC binding via NetMHCpan-4.1.</p>
+                <pre><code>netMHCpan -p peptides.txt \
+-a HLA-A*02:01 -BA</code></pre>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="card">
+                <span class="step-badge">Phase 03</span>
+                <h3>Multi-Omics Integration</h3>
+                <p>Correlating predicted epitopes with experimental CX-5461 RNA-seq data to prioritize upregulated, high-affinity candidates.</p>
+                <div class="viz-box"></div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="card">
+                <span class="step-badge">Phase 04</span>
+                <h3>Deep Learning</h3>
+                <p>Ensemble ML approach (NeoPredictor) integrating peptide sequences and HRD scores for immunogenicity ranking.</p>
+                <pre><code># PyTorch NeoPredictor
+combined = torch.cat((seq, feat))
+return classifier(combined)</code></pre>
+            </div>
+        </div>
+
+        <section class="results">
+            <h3>Simulated Results: Prioritized Neoantigens</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Gene Target</th>
+                            <th>Modification</th>
+                            <th>Affinity (nM)</th>
+                            <th>Expression (log2FC)</th>
+                            <th>Priority Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>BRCA1</td>
+                            <td>T > A (ATA)</td>
+                            <td>12.8</td>
+                            <td>+2.4</td>
+                            <td><span style="color: #10b981;">High</span></td>
+                        </tr>
+                        <tr>
+                            <td>TP53</td>
+                            <td>T > C (ATG)</td>
+                            <td>45.2</td>
+                            <td>+1.8</td>
+                            <td><span style="color: #10b981;">High</span></td>
+                        </tr>
+                        <tr>
+                            <td>PIK3CA</td>
+                            <td>T > A (ATA)</td>
+                            <td>510.5</td>
+                            <td>-0.2</td>
+                            <td><span style="color: #94a3b8;">Medium</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Portfolio Project - Advanced Immunogenomics Analysis</p>
+            <p style="font-size: 0.8rem; margin-top: 1rem;">This pipeline is designed for researchers at the intersection of DNA damage response and immunotherapy.</p>
+        </div>
+    </footer>
+</body>
+</html>

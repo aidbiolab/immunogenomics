@@ -1,0 +1,43 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editores y entornos
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos temporales y backups
+*.log
+*.tmp
+*.bak
+*~
+Thumbs.db
+
+# Entornos virtuales / dependencias
+venv/
+env/
+.env
+node_modules/
+__pycache__/
+*.pyc
+
+# Archivos pesados o sensibles (ajusta según tu proyecto)
+data/*.csv
+data/*.parquet
+data/*.xlsx
+data/*.jsonl
+models/*.h5
+models/*.pth
+models/*.pt
+models/*.pickle
+models/*.joblib
+*.zip
+*.tar.gz
+
+# Builds y distribuciones
+dist/
+build/
+*.egg-info/

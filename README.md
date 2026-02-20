@@ -1,4 +1,4 @@
-# Immunogenomics Workflow
+# A multi-omics Workflow
 
 ![Home Screenshot](https://raw.githubusercontent.com/aidbiolab/immunogenomics/main/Home.png)
 

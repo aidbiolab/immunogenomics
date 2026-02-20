@@ -1,7 +1,7 @@
 # CX-5461 Immunogenomics Workflow
 
 ![Project Showcase](index.html) <!-- Note: In GitHub, this would be a URL to the hosted page -->
-!(https://github.com/aidbiolab/immunogenomics/blob/main/Home.png)
+![Home Screenshot](https://raw.githubusercontent.com/aidbiolab/immunogenomics/main/Home.png)
 
 ## Project Overview
 This repository showcases a comprehensive computational framework for predicting neoantigens and identifying immune biomarkers in the context of **CX-5461 (Pidnarulex)** treatment. While optimized for **High-HRD Breast Cancer** subsets, the pipeline is architected to be systemically scalable to **Colorectal Cancer (CRC)** and other solid tumors sensitive to G-quadruplex stabilization.

@@ -1,4 +1,4 @@
-# CX-5461 Immunogenomics Workflow
+# Immunogenomics Workflow
 
 ![Home Screenshot](https://raw.githubusercontent.com/aidbiolab/immunogenomics/main/Home.png)
 

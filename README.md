@@ -90,9 +90,23 @@ install.packages(c("TCGAbiolinks", "DESeq2", "edgeR"))
 # Install external tools manually:
 # - NetMHCpan-4.1 → http://www.cbs.dtu.dk/services/NetMHCpan/
 # - MHCflurry    → pip install mhcflurry
-
+```
 Then run the steps sequentially:
 python scripts/step1_download_data.py
 python scripts/step2_neoantigen_prediction.py
 Rscript scripts/step3_integration.R
 python models/step4_ml_model.py
+
+References
+
+Cortes-Urrea et al. (2020). Exomes of Ductal Luminal Breast Cancer Patients from Southwest Colombia: Gene Mutational Profile and Related Expression Alterations. Biomolecules, 10(5), 698. DOI: 10.3390/biom10050698
+Additional reading: TCGA Pan-Cancer Atlas, COSMIC mutational signatures, NetMHCpan documentation
+
+License
+MIT License – see the LICENSE file for details.
+Contact & Collaboration
+
+Maintainer: Fabian Tobar-Tosse (ftobar@javerianacali.edu.co)
+Issues, suggestions, or collaboration proposals → open a GitHub issue
+
+Thank you for your interest in this immunogenomics workflow!
